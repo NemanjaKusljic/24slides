@@ -1,0 +1,306 @@
+/*///////HEDER/////////////*/
+header{
+    box-shadow: 0 0 4em darken($shadow, 10%);
+
+    .logo{
+        margin-left:1em;
+    }
+}
+
+.login{
+    border:1px solid $login-color;
+    background:none;
+    margin-right:1em;
+    font-weight:700;
+    
+    .login__link{
+        text-decoration:none;
+        text-transform:uppercase;
+        color:$login-color;
+        display:block;
+        padding:1em;
+    }
+
+}
+
+/*/////////////MAIN SECTION///////////*/
+main{
+    margin:2em 0 0 0;
+    padding-bottom:11em;
+    background-image:linear-gradient(to bottom,white,hsl(0,0,93));
+}
+.content{
+    flex:1;
+    padding: 7em 0 0 5em;
+    color:$text-color;
+    .content__bold{
+        font-weight: 700;
+    }
+
+    .bold__disapear{
+        align-self: flex-start;
+        width:50%;
+        background:$btn-color;
+        border:none;
+        border-radius:5px;
+        margin-top:5em;
+    
+        &:active{
+            background:$text-color;
+        }
+        .btn__link{
+            text-decoration: none;
+            text-transform: uppercase;
+            color:white;
+            display:block;
+            padding:2em 5em;
+        }
+    }
+/* Forma na klik da se prikaze a sakrije dio teksta:  */
+    .content__form{
+        display:none;
+        .input__label{
+            font-weight:700;
+        }
+        &:target{
+        color:$text-color;
+        display:block;
+        
+        .input__text{
+            display:block;
+            padding:0.5em 0;}
+        }
+        .form__button{
+            width:50%;
+            background:$btn-color;
+            color:white;
+            text-transform: uppercase;
+            border:none;
+            border-radius:5px;
+            margin-top:5em;
+            padding:2em 5em;
+        }
+    }
+    .content__form:target+.content__bold,
+    .content__form:target~.bold__disapear{
+        display:none;
+    }
+   
+}
+
+/* dio main-a gdje je slika laptopa*/
+.picture{
+    flex:1;
+    text-align:right;
+    padding:0;
+}
+
+
+
+/*///////FUTER //////////*/
+
+footer{
+    margin-top:0;
+    background:$futer-color;
+}
+
+/*///////////LOGIN PAGE//////////*/
+.content{
+    .login{
+        width:50%;
+        border:none;
+        margin-top:3em;
+        text-align: right;
+
+        &__button{
+            width:70%;
+            background:$btn-color;
+            color:white;
+            border:none;
+            border-radius:5px;
+            padding:1em 4em;
+            text-transform:uppercase;
+        }
+        .email__input,
+        .password__input{
+            padding:0.5em 0;
+        }
+    }
+}
+
+
+/*/////////////////SIGNUP PAGE////////////*/
+
+.content__form{
+    padding-top:0;
+    padding-left:1.5em;
+
+    *+*{
+        margin-top:0.7em;
+    }
+}
+
+.login--registration{
+   .email__input{
+       background:inherit;
+       width:45%;
+       border-width:1px;
+       border-color: rgb(169, 169, 169);
+       border-style:solid;
+       border-image:initial;
+       &::placeholder{
+           padding-left:0.5em;
+       }
+   }
+    .select__multiple{
+        padding:0.5em 0 0.5em 0.2em;
+        width:45%;
+        color:$text-color;
+        -webkit-appearance: none;
+        appearance: none;
+        background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9IjIzLjEsMzQuMSA1MS41LDYxLjcgODAsMzQuMSA4MS41LDM1IDUxLjUsNjQuMSAyMS41LDM1IDIzLjEsMzQuMSAiLz48L3N2Zz4=") no-repeat right;
+        .options__multiple{
+            color:$text-color;
+        }
+    }
+}
+
+/*///////////DASHBOARD PAGE////////*/
+.dashboard{
+    display:flex;
+    flex-wrap:wrap;
+   
+    @supports (display:grid){
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.dashboard__header{
+    display: flex;
+    flex-basis:100%;
+    @supports (display:grid){
+        grid-column: 1/ span 4;
+    }
+}
+.header__text{
+    color:$dashboard-text;
+    font-weight:400;
+    margin-left:10em;
+    margin-top:1em;
+    font-size: 1.5em;
+}
+.header__quote{
+    margin-left:auto;
+    margin-right:3em;
+    display:block;
+    padding:0.6em 1.2em;
+    text-transform: uppercase;
+    color:white;
+    background: $btn-color;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.header__account{
+    margin-right: 2em;
+    border:1px solid $dashboard-text;
+    color:$dashboard-text;
+    text-transform: uppercase;
+    text-decoration: none;
+    display:block;
+    padding: 0.6em;
+    font-size:0.8em;
+}
+
+.dashboard__main{
+    display:flex;
+    justify-content: space-between;
+    @supports (display:grid){
+        grid-column: 1 / span 4;             
+    }
+    margin-top:0;
+    padding-top:1rem;
+    
+
+    
+
+    .sidebar{
+        display:flex;
+        background-color: $main-color;
+        li{
+            color:$text-color;
+        }
+    }
+
+    .gallery{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        background-color: $main-color;
+        margin-top:0;
+
+        .gallery__card{
+            margin-top:0;
+            margin-bottom: 2.5rem;
+
+            .card__body{
+                position: relative;
+                background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url(../images/brochure.jpg);
+                    
+            }
+            .card__footer{
+                span{
+                    color: $text-color;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    .body__background{
+        position:relative;
+        z-index: 2;
+        padding: 0 3rem;
+        filter:brightness(45%);
+        -ms-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        
+        
+        
+    }
+
+        .body__text{
+            position: absolute;
+            z-index: 3;
+            top:50%;
+	        left:50%;
+            transform: translate(-50%,-50%);
+            color:white;
+            opacity:1;
+            
+        }
+}
+
+.unlock{
+    display:flex;
+    flex-basis:100%;
+    @supports (display:grid){
+        grid-column: 1 / span 4;
+    }
+    margin-top:0;
+    background-image:linear-gradient(to bottom,$futer-color,$main-color);
+    
+    .unlock__text{
+        color:$dashboard-text;
+        margin:0.7em;
+    }
+}
+
+.dashboard__footer{
+    display:flex;
+    flex-basis:100%;
+    @supports(display:grid){
+        grid-column: 1 / span 4;
+    }
+}
+

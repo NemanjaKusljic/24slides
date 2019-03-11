@@ -1,0 +1,47 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+box-sizing: inherit;
+margin:0;
+padding:0;
+}
+
+body * + * {
+    margin-top: 1.5em;
+    }
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main{
+    display:flex;
+    justify-content: space-between;
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+}
+
+.card__footer{
+    display:flex;
+    justify-content: space-between;
+    >* {margin-top: 0;}
+}

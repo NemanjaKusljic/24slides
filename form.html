@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>24 Slides</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.png" class="logo">
+        <button class="login">
+            <a href="login.html" class="login__link">Login</a>
+        </button>
+    </header>
+
+
+    <main>
+        <div class="content content__form">
+            <form method="POST" action="#" class="login login--registration">
+                    <div class="email">
+                        <label for="name">First name</label>
+                        <input type="text" id="name" class="email__input" placeholder="First name" required>
+                    </div>
+                    
+                    <div class="email">
+                        <label for="surname">Last name</label>
+                        <input type="text" id="surname" class="email__input" placeholder="Last name" required>
+                    </div>
+                    <div class="email">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" class="email__input" placeholder="Country" required>
+                    </div>
+                    <div class="email">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" class="email__input" placeholder="Company" required>
+                    </div>
+                    <div class="email">
+                        <label for="size">Company size</label>
+                        <select id="size" class="select__multiple">
+                            <option class="options__multiple">50-100</option>
+                            <option class="options__multiple">100-200</option>
+                            <option class="options__multiple">200-500</option>
+                            <option class="options__multiple">500+</option>
+                        </select>
+                    </div>
+                    <div class="email">
+                        <label for="use">I use templates for</label>
+                        <select id="use" class="select__multiple">
+                            <option class="options__multiple">Personal presentations</option>
+                            <option class="options__multiple">Work presentations</option>
+                            <option class="options__multiple">Commercial use</option>
+                        </select>
+                    </div>
+                    <div class="email">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="email__input" placeholder="Password" required>
+                    </div>
+                    <div class="email">
+                        <label for="repeat">Repeat passwrod</label>
+                        <input type="password" id="email" class="email__input" placeholder="Password" required>
+                    </div>
+                <button type="submit" class="login__button">Log in</button>
+            </form>
+        </div>
+
+        <div class="picture">
+            <img src="images/komp.png">
+        </div>
+    </main>
+
+    <footer>
+        <img src="images/futer-logos.png">
+    </footer>
+</body>
+</html>
